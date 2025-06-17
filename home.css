@@ -57,7 +57,9 @@ body {
 .header-button{
     padding-left: 30px;
 }
+
 .call-btn {
+  display: flex;
   background-color: #015281; /* cherry red */
   color: #fff;
   border: none;
@@ -72,6 +74,10 @@ body {
 .call-btn i {
   font-size: 14px;
   transform: scaleX(-1);
+}
+
+.call{
+  height: 20px;
 }
 
 .call-btn-mobile {
@@ -159,9 +165,9 @@ body {
   .main-header{
     width: 90%;
   }
-    .call-text{
-        display: none;
-    }
+  .call-text{
+    display: none;
+  }
 }
 
 @media (max-width: 920px) {
@@ -219,7 +225,7 @@ body {
   }
 
   .call-btn-mobile {
-    display: block; /* show mobile call button */
+    display: flex; /* show mobile call button */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -227,6 +233,12 @@ body {
     border-radius: 50%;
     width: 1%;
   }
+  
+  .call-btn-mobile i {   
+    position: relative;
+    left: -5px;
+  }
+
 }
 
 .hero {
@@ -529,6 +541,12 @@ body {
   background-color: #eb5e45;
 }
 
+@media (max-width:900px) {
+  .price-table th{
+    font-size: 1rem;
+  }
+}
+
 .floorplan-section {
   background-color: #fbf8f6;
   padding: 20px 20px;
@@ -544,7 +562,7 @@ body {
 
 .floorplan-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   gap: 40px;
   margin-bottom: 40px;
@@ -587,6 +605,12 @@ body {
 
 .floorplan-button:hover {
   background-color: #eb5e45;
+}
+
+@media (max-width:900px) {
+  .floorplan-cards{
+    flex-wrap: wrap;
+  }
 }
 
 .custom-section {
@@ -652,7 +676,7 @@ body {
 
 .gallery-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   gap: 40px;
   margin-bottom: 40px;
@@ -672,6 +696,12 @@ body {
   height: 200px;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+
+@media (max-width:900px) {
+  .gallery-cards{
+    flex-wrap: wrap;
+  }
 }
 
 .location-section {
